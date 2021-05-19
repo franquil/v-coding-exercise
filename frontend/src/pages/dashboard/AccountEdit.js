@@ -8,6 +8,7 @@ function AccountEdit() {
   const [name, setName] = useState("");
   const { username, setUsername } = useAuth();
   const history = useHistory();
+
   function handleSubmit(e) {
     e.preventDefault();
     postAccount({ username: name || username })
@@ -21,6 +22,7 @@ function AccountEdit() {
       })
       .catch((e) => console.error(e));
   }
+
   return (
     <>
       <div className="container">
